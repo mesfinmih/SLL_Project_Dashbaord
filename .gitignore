@@ -1,0 +1,14 @@
+
+# Ignore all CSV, Excel, and data folders
+*.csv
+*.xlsx
+*.xls
+*.sav
+*.dta
+*.json
+*.zip
+*.tar.gz
+
+data/
+datasets/
+drive/
