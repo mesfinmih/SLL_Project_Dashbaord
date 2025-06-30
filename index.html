@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Interactive Woreda Summary Table</title>
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css" />
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    table.dataTable { width: 100% !important; }
+  </style>
+</head>
+<body>
+
+<h1>Woreda Summary Interactive Table</h1>
+
+<table id="woredaTable" class="display"></table>
+
+<script>
+  $(document).ready(function () {
+    Papa.parse('woreda_summary.csv', {
+      download: true,
+      header: true,
+      complete: function(results) {
+        const data = results.data;
+        const columns = results.meta.fields.map(field => ({ title: field, data: field }));
+
+        $('#woredaTable').DataTable({
+          data: data,
+          columns: columns,
+          scrollX: true,
+          pageLength: 15
+        });
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
