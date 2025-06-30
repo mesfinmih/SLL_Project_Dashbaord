@@ -1,6 +1,10 @@
 # Head Count Analysis
 ![image](https://github.com/user-attachments/assets/380c1aee-7e80-4852-ade2-460be2a0c7eb)
 
+# Household and Total Family Size by Region
+![image](https://github.com/user-attachments/assets/869d900b-23c9-43e5-869a-edc1490568ee)
+
+
 # GPS Location Nationally
 ![image](https://github.com/user-attachments/assets/1ad2e3b0-404b-4cee-917b-a120132fbacc)
 
